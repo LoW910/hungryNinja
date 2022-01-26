@@ -9,8 +9,13 @@ namespace HungryNinja
         {
             Console.WriteLine("Beginning of the Hungry Ninja!");
 
-            Buffet eats = new Buffet();
-            Ninja jay = new Ninja();
+            // implementing abstract class for ninja removes below  lines
+            // // Buffet eats = new Buffet();
+            // // Ninja jay = new Ninja();
+            // // while(!jay.IsFull){
+            // //     jay.Eat(eats.Serve());
+            // // }
+            
             
             // // System.Console.WriteLine(eats.Menu);
             // // foreach (var item in eats.Menu)
@@ -30,10 +35,6 @@ namespace HungryNinja
             // //     System.Console.WriteLine(item.Name);
             // // }
 
-            while(!jay.IsFull){
-                jay.Eat(eats.Serve());
-            }
-            
 
         }
     }
