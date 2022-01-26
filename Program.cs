@@ -10,7 +10,25 @@ namespace HungryNinja
             Console.WriteLine("Beginning of the Hungry Ninja!");
 
             // implementing abstract class for ninja removes below  lines
-            // // Buffet eats = new Buffet();
+            Buffet eats = new Buffet();
+            SweetTooth jay = new SweetTooth();
+            SpiceHound dan = new SpiceHound();
+
+            while(!dan.IsFull){
+                System.Console.WriteLine("====== inside dans while ==========");
+                dan.Consume(eats.Serve());
+            }
+            while(!jay.IsFull){
+                System.Console.WriteLine("====== inside jays while ==========");
+                jay.Consume(eats.Serve());
+            }
+
+            if(dan.ConsumptionHistory.Count > jay.ConsumptionHistory.Count){
+                System.Console.WriteLine($"SpiceHound consumed {dan.ConsumptionHistory.Count} SweetTooth consumed {jay.ConsumptionHistory.Count}");
+            } else {
+                System.Console.WriteLine($"SweetTooth consumed {jay.ConsumptionHistory.Count} SpiceHound consumed {dan.ConsumptionHistory.Count}");
+
+            }
             // // Ninja jay = new Ninja();
             // // while(!jay.IsFull){
             // //     jay.Eat(eats.Serve());
@@ -34,6 +52,7 @@ namespace HungryNinja
             // // {
             // //     System.Console.WriteLine(item.Name);
             // // }
+
 
 
         }
